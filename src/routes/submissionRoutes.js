@@ -1,21 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const {
-  getSubmissions,
-  getSubmissionById,
-  createSubmission,
-  updateSubmission,
-  deleteSubmission
+    getAllSubmissions,
+    getSubmissionById,
+    createSubmission,
+    updateSubmission,
+    deleteSubmission
 } = require('../controllers/submissionController');
 
-// Clean mapping of routes
+// Routes for /api/submissions
 router.route('/')
-  .get(getSubmissions)
-  .post(createSubmission);
+    .get(getAllSubmissions)
+    .post(createSubmission);
 
 router.route('/:id')
-  .get(getSubmissionById)
-  .put(updateSubmission)
-  .delete(deleteSubmission);
+    .get(getSubmissionById)
+    .put(updateSubmission)
+    .delete(deleteSubmission);
 
 module.exports = router;
