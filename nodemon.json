@@ -1,0 +1,4 @@
+{
+  "ignore": ["node_modules/", "docs/", ".env", "*.log"],
+  "delay": "1500"
+}
