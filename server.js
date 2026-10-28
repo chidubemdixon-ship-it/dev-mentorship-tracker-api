@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./src/config/db');
 const submissionRoutes = require('./src/routes/submissionRoutes');
+const { errorHandler } = require('./src/middleware/errorMiddleware');
 
 // Load environment variables from .env
 dotenv.config();
@@ -17,8 +18,10 @@ app.use(express.json());
 // Mount router
 app.use('/api/submissions', submissionRoutes);
 
-const PORT = process.env.PORT || 5000;
+// Error Handling Middleware (MUST be registered last, after routes)
+app.use(errorHandler);
 
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
