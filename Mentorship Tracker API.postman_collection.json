@@ -1,0 +1,75 @@
+{
+  "info": {
+    "_postman_id": "06c56739-1e24-4f14-a9d8-e22e5f4beda1",
+    "name": "Mentorship Tracker API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57876012",
+    "_collection_link": "https://go.postman.co/collection/57876012-06c56739-1e24-4f14-a9d8-e22e5f4beda1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "POST Register",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/auth/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Get Me (Protected)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "submissions",
+      "item": [
+        {
+          "name": "POST Create Submission",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Fetch Submissions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
